@@ -41,7 +41,7 @@ class Checker
         return true;
     }
 
-    private static bool VitalsOk(float temperature, int pulseRate, int spo2)
+    public static bool VitalsOk(float temperature, int pulseRate, int spo2)
     {
         return CheckVitals("Temperature", temperature, 95,102) && CheckVitals("Pulse Rate", pulseRate, 60, 100) && CheckVitals("Oxygen Saturation", spo2, 90, null);
     }
