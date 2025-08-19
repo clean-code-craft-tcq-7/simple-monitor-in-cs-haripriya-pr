@@ -15,5 +15,7 @@ public class CheckerTests
         Assert.False(Checker.VitalsOk(93f, 75, 85)); //Temp & SPO2 out of range
         Assert.False(Checker.VitalsOk(98f, 59, 88)); //Pulse & SPO2 out of range
         Assert.False(Checker.VitalsOk(103f, 59, 87)); //All out of range
+        Assert.True(Checker.CheckVitals("Temperature", 98, 95, 102)); // Normal temperature
+        Assert.False(Checker.CheckVitals("Temperature", 103, 95, 102)); //Temperature out of range.
     }
 }

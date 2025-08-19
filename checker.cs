@@ -30,7 +30,7 @@ class Checker
         return false;
     }
 
-    private static bool CheckVitals(string vital,float reading, float? lowerLimit, float? upperLimit)
+    public static bool CheckVitals(string vital,float reading, float? lowerLimit, float? upperLimit)
     {
         if (IsGreaterThan(reading, upperLimit) || IsLesserThan(reading, lowerLimit))
         {
